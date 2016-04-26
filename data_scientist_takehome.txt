@@ -1,0 +1,49 @@
+# Radius Takehome - Data Scientist Role
+
+We offer this takehome assignment for a few reasons:
+
+1.  We would like to get a sense of your coding ability and style as well as your approach to solving a machine learning problem in a business context.
+2.  We would like you to get a sense for a type of projects that a data scientist at Radius might be expected to tackle.
+3.  It is an opportunity for you to sharpen your coding/ML skills and perhaps learn something new!
+
+You should be able to complete this takehome within a few hours, but we set no official time limit. We ask that you use Python or Scala to complete the task, as those are the languages of choice at Radius, but you are welcome to use any standard libraries or modules that you find helpful. If you have any questions about the assignment, please ask!
+
+## The Assignment
+
+### The Scenario
+
+A fictional customer has presented us with a set of data from their marketing efforts. They wish to market more effectively, but lack a data scientist on staff. Each row of their data files contains information about a single business. For 3000 of these businesses, a marketing effort has already been attempted. The successes and failures of these attempts are contained in a file of labels. Before they attempt to market to the other 10000 businesses, they want us to predict which are most likely to succeed.
+
+### The Problem
+
+This is a typical exercise in supervised machine learning. You must featurize the training data, train a strong model, and use it to predict the marketability of the businesses in the test set. While we would certainly like to see you produce an accurate model, we are more excited to see how you approach the problem and how well you demonstrate your understanding of the theory and practice of machine learning. Because real world data is imperfect, this data set is too. We look forward to seeing how well you meet its challenges!
+
+### The Raw Data
+
+* The `DS_train.csv` file contains a header row and 3000 rows of data.
+* The `DS_test.csv` files contains a header row and 10000 rows of data.
+* The `DS_train_labels.json` file contains a mapping of unique ID to a binary label indicating the marketing success of that business in the training set.
+
+### The Analysis
+
+As mentioned earlier, we are _most_ interested in the way that you approach each stage of the problem.
+
+* How did you engineer and select features?
+* How did you select a model and tune its hyperparameters?
+* What cross-validation methods did you use?
+* How did you select a final model?
+* Will your model scale up effectively if you need to classify many millions of examples? If the prototyped model needed to be translated into another language, would that be practical?
+* If you had another day to work on the problem, what would you focus on?
+
+Please describe your thought processes in detail!
+
+
+## Submission of Work
+
+Please submit at least these three files:
+
+1.  A prediction file containing your final model's predicted probability for each example in the test set, keyed by unique id. You may submit this as JSON or CSV, and the order of rows does not matter.
+2.  A python or scala script containing your featurizers, models, validation methods, etc. Any and all code you write for the problem should be submitted. You may also submit an ipython notebook or some other workbook, but we would prefer if the main body of your code was presented in a single clean and well-documented script.
+3.  A text or markdown file describing your reasoning and approach to all stages of the problem and your analysis of its challenges. We would also like to hear your expectations for the accuracy of your test predictions, using any metrics you find appropriate. Bonus points for confidence intervals of each cell of the confusion matrix at your chosen threshold, or a cost-benefit analysis about the profitability of the marketing opportunities!
+
+If you produce any additional work or visualizations, please include that as well! Good luck, and let us know if you have any questions.

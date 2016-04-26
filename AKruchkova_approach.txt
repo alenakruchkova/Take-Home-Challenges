@@ -1,0 +1,48 @@
+* How did you engineer and select features?
+
+
+	I am using a linear regression model. I am not selecting any particular features. I am using every column in csv.
+
+	I have converted all categorical values to numerical and one hot vectors. 
+
+	Contacts_title and degree_connected had missing values. For contact_titles, I have treated an empty string as another variable and had given it a numeric value, that was then converted to one hot vector. 
+	I replaced missing values in degree_connected with 0. 
+
+
+* How did you select a model and tune its hyperparameters?
+
+
+	I did not normalize or select features, as I was using a linear regression model.
+
+
+* What cross-validation methods did you use?
+
+	
+	I fitted my model on a subset of the training set and evaluated on the rest. 
+	Estimator performance was 78% accurate.
+
+	With linear regression there are no tunable parameters, so I did not have to cross-validate.
+
+
+* How did you select a final model?
+
+	
+	I am still very new to Machine Learning and i selected linear regression for it's simplicity of implementation. 
+
+
+* Will your model scale up effectively if you need to classify many millions of examples? If the prototyped model needed to be translated into another language, would that be practical?
+
+
+	I do not know what particular algorithm SciKit Learn uses for linear regression. It may be a naive solution - O(n**3), or a more sophisticated one - O(n), where n is a length of vector.
+
+	If this model needed to be translated into another language. We could get coefficients from our model( in evalate_model() ). Then we would have to implement equivalent of the following code in the new language:
+
+	def predict(coifs, new_vector):
+  		for c,v in zip(coif, new_vector):
+    		result += c*v
+  		return result
+
+
+* If you had another day to work on the problem, what would you focus on?
+
+	I would try using more complex models like Logistic Regression and play with parameters for more accurate prediction.
